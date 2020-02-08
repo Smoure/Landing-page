@@ -10,12 +10,10 @@ export function Card(props) {
 				alt="Card image cap"
 			/>
 			<div className="card-body">
-				<h5 className="card-title">Which one is the forbidden dog?</h5>
-				<p className="card-text">
-					Your doggo can be on here! Submit above your cute pupper.
-				</p>
-				<a href="#" className="btn btn-primary">
-					Read More
+				<h5 className="card-title">{props.crdTitle}</h5>
+				<p className="card-text">{props.crdDesc}</p>
+				<a href="#" className={props.btnColor}>
+					{props.btnTitle}
 				</a>
 			</div>
 		</div>
@@ -23,5 +21,9 @@ export function Card(props) {
 }
 
 Card.propTypes = {
-	img_url: PropTypes.string
+	img_url: PropTypes.string,
+	crdDesc: PropTypes.string,
+	crdTitle: PropTypes.string,
+	btnColor: PropTypes.string,
+	btnTitle: PropTypes.string
 };

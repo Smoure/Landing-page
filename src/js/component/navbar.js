@@ -23,20 +23,11 @@ export function NavBar() {
 					<ul className="navbar-nav">
 						<li className="nav-item active">
 							<a className="nav-link" href="#">
-								But click me for Dog pics{" "}
+								But click me for more cool animal facts
 								<span className="sr-only">(current)</span>
 							</a>
 						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Forbidden Dogs
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Derpy Dogs
-							</a>
-						</li>
+
 						<li className="nav-item dropdown">
 							<a
 								className="nav-link dropdown-toggle"
@@ -45,21 +36,16 @@ export function NavBar() {
 								data-toggle="dropdown"
 								aria-haspopup="true"
 								aria-expanded="false">
-								Looking for something else?
+								MORE
 							</a>
 							<div
 								className="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<a className="dropdown-item" href="#">
-									No you
+									Contact me for specific animal facts that
+									you
 									{"'"}
-									re not
-								</a>
-								<a className="dropdown-item" href="#">
-									Trust me
-								</a>
-								<a className="dropdown-item" href="#">
-									Even More Cute Dogs
+									re too lazy to google.
 								</a>
 							</div>
 						</li>
