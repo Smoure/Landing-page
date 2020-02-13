@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export function Card(props) {
 	return (
-		<div className="card mx-2" style={{ width: "300px" }}>
+		<div className="card mb-3 mx-2" style={{ width: "270px" }}>
 			<img
 				className="card-img-top"
 				src={props.img_url}
@@ -12,7 +12,7 @@ export function Card(props) {
 			<div className="card-body">
 				<h5 className="card-title">{props.crdTitle}</h5>
 				<p className="card-text">{props.crdDesc}</p>
-				<a href="#" className={props.btnColor}>
+				<a href={props.btnLink} className={props.btnColor}>
 					{props.btnTitle}
 				</a>
 			</div>
@@ -25,5 +25,6 @@ Card.propTypes = {
 	crdDesc: PropTypes.string,
 	crdTitle: PropTypes.string,
 	btnColor: PropTypes.string,
-	btnTitle: PropTypes.string
+	btnTitle: PropTypes.string,
+	btnLink: PropTypes.string
 };

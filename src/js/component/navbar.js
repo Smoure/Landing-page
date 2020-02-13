@@ -4,7 +4,7 @@ export function NavBar() {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container">
-				<a className="navbar-brand" href="#">
+				<a className="navbar-brand" href="https://www.google.com">
 					Not sure who let me make a page
 				</a>
 				<button
@@ -22,7 +22,9 @@ export function NavBar() {
 					id="navbarNavDropdown">
 					<ul className="navbar-nav">
 						<li className="nav-item active">
-							<a className="nav-link" href="#">
+							<a
+								className="nav-link"
+								href="https://www.thedodo.com/16-amazing-animal-facts-1094218100.html">
 								But click me for more cool animal facts
 								<span className="sr-only">(current)</span>
 							</a>
@@ -41,7 +43,9 @@ export function NavBar() {
 							<div
 								className="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
-								<a className="dropdown-item" href="#">
+								<a
+									className="dropdown-item"
+									href="https://www.gmail.com">
 									Contact me for specific animal facts that
 									you
 									{"'"}

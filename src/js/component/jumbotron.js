@@ -1,23 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 export function Jumbotron(props) {
+	const [fact, setFact] = useState("(Your fact here)");
+	const [list, setList] = useState([]);
+
 	return (
-		<div className="jumbotron">
-			<div className="container">
-				<h1 className="display-4">{props.header}</h1>
+		<div className="container mt-3">
+			<div className="jumbotron">
+				<h1 className="display-4">Hello, World!</h1>
 				<p className="lead">
 					Animals are really cool {"&"} I know a bunch of facts.
 					<br />
 					<strong>FACT.</strong> Opossums don
 					{"'"}t carry Rabies.
 					<br />
-					FACT. Green Herons are one of the few tool-using birds.
+					<strong>FACT.</strong> Green Herons are one of the few
+					tool-using birds.
 					<br />
-					FACT. Your pet definitely deserves extra treats.
+					<strong>FACT.</strong> Your pet definitely deserves extra
+					treats.
 					<br />
-					Rename the title of this page with your favorite animal
-					fact!
+					<strong>
+						FACT. {fact}
+						{list.map((item, index) => {
+							return (
+								<div
+									key={index}
+									onClick={() =>
+										setList(list.filter(e => e !== item))
+									}>
+									{item}
+								</div>
+							);
+						})}
+					</strong>
+					<br />
+					Add your favorite animal fact to the list!
 				</p>
 				<div
 					className="input-group input-group-lg"
@@ -30,6 +49,13 @@ export function Jumbotron(props) {
 						className="form-control"
 						aria-label="Large"
 						aria-describedby="inputGroup-sizing-sm"
+						onChange={e => setFact(e.target.value)}
+						onKeyPress={e => {
+							if (event.key === "Enter") {
+								setList(list.concat(fact));
+								setFact("");
+							}
+						}}
 					/>
 				</div>
 			</div>
